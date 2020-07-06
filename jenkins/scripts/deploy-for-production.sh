@@ -17,7 +17,6 @@ echo 'branch.'
 set -x
 npm cache clean
 npm install --no-optional serve
-npm install npm-install-peers
 set +x
 
 echo 'The following "serve" command runs the npm serve module (downloaded'
