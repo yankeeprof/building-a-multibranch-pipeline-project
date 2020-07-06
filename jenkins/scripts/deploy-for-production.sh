@@ -15,6 +15,7 @@ echo '"/var/jenkins_home/workspace/"), which means that this module should not'
 echo 'need to be downloaded after this Pipeline''s initial run for a given'
 echo 'branch.'
 set -x
+npm cache clean
 npm install --no-optional serve
 set +x
 
