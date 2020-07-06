@@ -16,7 +16,7 @@ echo 'need to be downloaded after this Pipeline''s initial run for a given'
 echo 'branch.'
 set -x
 npm cache clean
-npm install --no-optional serve
+npm install --no-optional hello-world-module
 set +x
 
 echo 'The following "serve" command runs the npm serve module (downloaded'
@@ -28,11 +28,11 @@ echo 'can pause running builds of CI/CD applications indefinitely. "serve"'
 echo 'is followed by another command that retrieves the process ID (PID) value'
 echo 'of the previously run process (i.e. "serve") and writes this value to'
 echo 'the file ".pidfile".'
-set -x
-./node_modules/serve/bin/serve.js -c 0 -s build &
-sleep 1
-echo $! > .pidfile
-set +x
+#set -x
+#./node_modules/serve/bin/serve.js -c 0 -s build &
+#sleep 1
+#echo $! > .pidfile
+#set +x
 
 echo 'Now...'
 echo 'Visit http://localhost:5000 to see your Node.js/React application in action.'
